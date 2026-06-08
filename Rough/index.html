@@ -1,17 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rough</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Arithmetic Operations</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Random Number Generator</h1>
-      <label id="num"></label>
-      <button id="btn" class="buttons">Click me</button>
-    </div>
-    <script src="script.js"></script>
+    <h2>Two-Digit Arithmetic Operations</h2>
+    <script>
+      function performArithmetic(num1, num2) {
+        // Validation for two-digit numbers
+        if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
+          document.write("Please provide valid two-digit numbers.");
+          return;
+        }
+
+        document.write("<p><b>Numbers:</b> " + num1 + " and " + num2 + "</p>");
+        document.write("<p><b>Addition:</b> " + (num1 + num2) + "</p>");
+        document.write("<p><b>Subtraction:</b> " + (num1 - num2) + "</p>");
+        document.write("<p><b>Multiplication:</b> " + num1 * num2 + "</p>");
+        document.write(
+          "<p><b>Division:</b> " + (num1 / num2).toFixed(2) + "</p>",
+        );
+      }
+
+      performArithmetic(45, 12);
+    </script>
   </body>
 </html>
